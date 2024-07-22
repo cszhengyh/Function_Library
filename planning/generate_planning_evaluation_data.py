@@ -35,7 +35,7 @@ for problem, funclist in problem_to_funclist.items():
     temp_pool = func_pool
     for func in funclist:
         func_pool.remove(func)
-    sample_cnt =  # ?
+    sample_cnt = len(funclist)
     neg_funcs = sampling_neg_funcs(func_pool, sample_cnt)
     func_pool = temp_pool
     planning_data = "{"+f"problem: {problem}, func_list: {neg_funcs+funclist}"+"}\n"
